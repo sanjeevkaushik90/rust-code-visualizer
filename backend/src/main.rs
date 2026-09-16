@@ -14,8 +14,10 @@ fn main() {
 
         let clean_line = line.trim();
 
-        if clean_line.starts_with("let ") {
-            println!("line {} : variable declare ", index);
+        for word in clean_line.split_whitespace() {
+            if clean_line.starts_with("let ") {
+                println!("line {} : variable {} declare ", index, word);
+            }
         }
     }
 }
